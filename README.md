@@ -1,6 +1,6 @@
 # DEVHUNT
 
-App that looks for a developer on [GitHub](https://github.com) built using [GitHub Users API](https://docs.github.com/en/rest/users/users#get-a-user).
+App built using [GitHub Users API](https://docs.github.com/en/rest/users/users#get-a-user) that looks for a developer on [GitHub](https://github.com).
 
 ## Technologies Used
 ![HTML](https://img.icons8.com/color/48/000000/html-5--v1.png)
