@@ -41,7 +41,7 @@ body.light .container {
 }
 
 main {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,9 +255,18 @@ i {
 }
 
 @media (max-width: 600px) {
+    main {
+        padding: 1.2rem 0;
+    }
+    
     form {
         padding-left: .7rem;
         gap: .5rem;
+    }
+
+    #input {
+        max-width: 50%;
+        margin-right: auto;
     }
 
     .fa-search {
