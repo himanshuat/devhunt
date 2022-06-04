@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    outline: none;
+    letter-spacing: 1px;
+}
+
+body {
+    --accent: #0079FF;
+    --accent-hover: #3d95f8;
+    --no-result-clr: #F74646;
+    min-height: 100vh;
+    color: var(--font-clr);
+    background-color: var(--primary-clr);
+}
+
+.dark {
+    --primary-clr: #141D2F;
+    --secondary-clr: #1E2A47;
+    --font-clr: #FFF;
+    --font-clr-disabled: #9A9A9A;
+}
+
+.light {
+    --primary-clr: #F6F8FF;
+    --secondary-clr: #FEFEFE;
+    --font-clr: #343434;
+    --font-clr-disabled: #787878;
+}
+
+a {
+    color: var(--font-clr);
+}
+
+body.light form,
+body.light .container {
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.1986);
+    ;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+header,
+form,
+.container {
+    width: min(620px, 90%);
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#toggle-theme-btn {
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--font-clr);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+form {
+    padding: .5rem;
+    border-radius: .75rem;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    background-color: var(--secondary-clr);
+}
+
+.fa-search {
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-left: 1rem;
+}
+
+#input {
+    color: var(--font-clr);
+    flex-grow: 1;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--secondary-clr);
+}
+
+input[type="submit"] {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-radius: .7rem;
+    border: none;
+    color: #FFF;
+    background-color: var(--accent);
+    cursor: pointer;
+    transition: all .1s ease-in;
+}
+
+input[type="submit"]:hover {
+    box-shadow: inset 0 0 0 3px var(--accent);
+    background-color: var(--accent-hover);
+}
+
+.container {
+    min-height: 415px;
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: var(--secondary-clr);
+}
+
+.not-found {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.not-found > img {
+    width: 70%;
+}
+
+.not-found > p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#profile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#profile-img {
+    height: 125px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.profile-info-container>* {
+    margin: .5rem 0;
+}
+
+#username {
+    color: var(--accent);
+    transition: all .1s ease-in;
+}
+
+#username:hover {
+    color: var(--accent-hover);
+}
+
+#bio {
+    line-height: 1.5;
+}
+
+#stats {
+    padding: 1rem;
+    background-color: var(--primary-clr);
+    border-radius: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.stat-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.stat-title {
+    font-size: .9rem;
+}
+
+.stat-count {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.disabled {
+    color: var(--font-clr-disabled);
+    cursor: not-allowed;
+}
+
+.info-group>i {
+    color: var(--accent);
+    margin-right: .2rem;
+}
+
+.footer {
+    padding: 2rem .5rem;
+    background-color: var(--secondary-clr);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.footer p>a {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.social {
+    margin-top: 1rem;
+}
+
+.social a {
+    margin: .5em;
+    font-size: 1.75em;
+    color: var(--font-clr);
+}
+
+.social a:hover {
+    color: var(--accent);
+}
+
+i {
+    transition: all .2s ease-out;
+}
+
+.social a:hover i {
+    transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+    form {
+        padding-left: .7rem;
+        gap: .5rem;
+    }
+
+    .fa-search {
+        margin-left: 0;
+    }
+
+    #profile-img {
+        height: 100px;
+    }
+
+    #info {
+        grid-template-columns: 1fr;
+    }
+
+    .info-group>span {
+        letter-spacing: 1.5px;
+    }
+}
